@@ -61,3 +61,8 @@ p {
     color: white;
     background-color:rebeccapurple
 }
+
+.button:hover {
+    background-color: #CDB7F6
+
+}
