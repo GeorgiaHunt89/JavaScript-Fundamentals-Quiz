@@ -1,7 +1,7 @@
 // Global Variables
 var secondsLeft = 45;
-var timeEl = document.querySelector('#timer');
-
+var timeEl = document.querySelector('#countdown-timer');
+var buttonEl = document.querySelector('.button')
 // Questions, answers & correct answers
 const questions = [
     { // First question
@@ -11,7 +11,7 @@ const questions = [
             b: 'Booleans',
             c: 'Alerts',
             d: 'Numbers',    
-        }
+        },
         correctAnswer: 'c'
     },
     { // Second question
@@ -21,7 +21,7 @@ const questions = [
             b: 'Curly Brackets',
             c: 'Parenthesis',
             d: 'Square Brackets',    
-        }
+        },
         correctAnswer: 'c'
     },
     { // Third question
@@ -31,7 +31,7 @@ const questions = [
             b: 'Booleans',
             c: 'Other arrays',
             d: 'All of the above',    
-        }
+        },
         correctAnswer: 'd'
     },
     { // Fourth question
@@ -41,7 +41,7 @@ const questions = [
             b: 'Curly Brackets',
             c: 'Parenthesis',
             d: 'Square Brackets',    
-        }
+        },
         correctAnswer: 'a'
     },
 ]
@@ -50,8 +50,8 @@ const questions = [
 // Start quiz timer
 function startQuiz() {
     var timerInterval = setInterval(function(){
-        secondsLeft--;
-        timeEl.textContent = secondsLeft + ' seconds left';
+        secondsLeft = secondsLeft - .1;
+        timeEl.textContent = secondsLeft.toFixed(2) + ' seconds left';
 
         if(secondsLeft === 0){
             clearInterval(timerInterval);
@@ -59,3 +59,9 @@ function startQuiz() {
         }
     }, 100);
 }
+
+buttonEl.addEventListener('click', function(){
+    startQuiz()
+})
+
+
