@@ -3,3 +3,8 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    align-items: center;
+    display: flexbox;
+    font-family:Georgia, 'Times New Roman', Times, serif
