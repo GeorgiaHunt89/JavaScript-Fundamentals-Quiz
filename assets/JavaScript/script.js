@@ -61,9 +61,20 @@ function LaunchQuestions(){
 
     } else {
         questionEl.innerText = quiz[questIndex].questionTitle;
-        data-value-a.innerHTML = quiz[questIndex].possibleAnswers[0];
-        data-value-b.innerHTML = quiz[questIndex].possibleAnswers[1];
-        data-value-c.innerHTML = quiz[questIndex].possibleAnswers[2];
-        data-value-d.innerHTML = quiz[questIndex].possibleAnswers[3];
+        data-value-a.innerHTML === quiz[questIndex].possibleAnswers[0];
+        data-value-b.innerHTML === quiz[questIndex].possibleAnswers[1];
+        data-value-c.innerHTML === quiz[questIndex].possibleAnswers[2];
+        data-value-d.innerHTML === quiz[questIndex].possibleAnswers[3];
+    }
+}
+
+// Function to display correct answer selection Yes or No alert
+
+function selectAnswer(){
+    if (event.target.textContent === quiz[questIndex].answer){
+        alert('Great job!\n That is correct.');
+    } else {
+        alert('Whoops, wrong answer.');
+        secondsLeft = secondsLeft - 10;
     }
 }
