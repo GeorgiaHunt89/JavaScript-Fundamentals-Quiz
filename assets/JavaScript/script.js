@@ -1,49 +1,42 @@
 // Global Variables
 var secondsLeft = 45;
 var timeEl = document.querySelector('#countdown-timer');
-var buttonEl = document.querySelector('.button');
 var removeHeading = document.getElementById('#heading-section');
-var startQuiz = document.getElementById('#quiz-section')
-var nextButton = document.getElementById('#next-btn')
-var finishQuiz =document.getElementById 
+var startQuiz = document.getElementById('#quiz-section');
+var nextButton = document.getElementById('#next-btn');
+var finishQuiz = document.getElementById ('#finish-quiz');
+var questIndex = 0;
 
-// Start quiz timer
-function startTimer() {
+const buttonEl = document.querySelector ('.button');
+const buttonStart = document.querySelector ('.start-quiz-btn')
+
+var leaderboard = [];
+
+
+// Function for quiz timer to start counting down from 45 seconds
+function startTimer(){
     var timerInterval = setInterval(function(){
         secondsLeft = secondsLeft - .1;
         timeEl.textContent = secondsLeft.toFixed(2) + ' seconds left';
 
-        if(secondsLeft === 0 | questIndex === questions.length){
+        if(secondsLeft === 0){
             clearInterval(timerInterval);
             sendMessage();
-            return;
-        }
+            }
     }, 100);
 }
 
-function sendMessage() {
-    timerEL.textContent = 'Time is up, better luck next time!';
-}
-
-// Function to start quiz with Start button
-buttonEl.addEventListener('click', function(){
-    startTimer()
-})
-
-
-// Function to start displaying the quiz questions
+// Function to remove heading and start displaying the quiz questions
 function displayQuiz(){
-removeHeading.classList.add('hide');
-startQuiz.classList.remove('hide');
-nextButton.classList.remove('hide');
-LaunchQuestions();
+    removeHeading.classList.add('hide');
+    startQuiz.classList.remove('hide');
+    nextButton.classList.remove('hide');
+    LaunchQuestions();
 }
 
-var questIndex = 0;
+// Function to start quiz timer and show questions with Start button
+[buttonEl, buttonStart].map(element => element.addEventListener('click' function(){
+ startTimer();
+ displayQuiz();   
+} ))
 
-function launchQuestions() {
-    if (questIndex === questions.length | startTime === 0){
-        finishQuiz.classList.remove('hide');
-        startQuiz.classList.add('hide');
-    }
-}
