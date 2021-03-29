@@ -80,9 +80,21 @@ p {
 #start-quiz-btn {
     margin: 20px;
     padding: 20px;
-
 }
+
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 15px;
+    font: 15px;
+    text-align: center;
+    justify-self: center;
+}
+
 
 .hide {
     display: none;
 }
+
