@@ -1,7 +1,10 @@
 // Global Variables
 var secondsLeft = 45;
 var timeEl = document.querySelector('#countdown-timer');
-var buttonEl = document.querySelector('.button')
+var buttonEl = document.querySelector('.button');
+var removeHeading = document.getElementById('#heading-section');
+var startQuiz = document.getElementById('#quiz-section')
+var nextButton = document.getElementById('#next-btn')
 
 // Start quiz timer
 function startTimer() {
@@ -25,8 +28,15 @@ buttonEl.addEventListener('click', function(){
     startTimer()
 })
 
-function startQuiz(){
-    
+
+// Function to start displaying the quiz questions
+function displayQuiz(){
+removeHeading.classList.add('hide');
+startQuiz.classList.remove('hide');
+nextButton.classList.remove('hide');
+LaunchQuestions();
 }
+
+var startingScore = 0;
 
 
