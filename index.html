@@ -12,7 +12,7 @@
     <header>
     <div>
         <!-- Highscores link --> 
-        <a href='#highscores' id='highscores-btn'>View Highscores</a>
+        <a href='#leaderboard' id='highscores-btn'>View Highscores</a>
         <!-- Countdown timer -->
         <div id='countdown-timer'> Timer:</div>
         </div>
@@ -43,7 +43,7 @@
     </section>
     
     <!-- End Quiz Section-->
-    <section id='end-quiz'>
+    <section id='end-quiz hide'>
         <h3 id='finish-quiz'>Congratulations! 
             <br>You have finished the quiz.</h3>
         <p>Record your initals below to save your score.</p>
@@ -51,6 +51,13 @@
         <textarea rows='1' cols='12' placeholder='YOUR INITIALS' id='enter-initials'></textarea>
     <!-- Submit Button -->    
     <button class='button'> Submit </button>
+    </section>
+
+    <!-- Highscores Section -->
+    <section id='leaderboard'>
+        <h4>Highscores</h4>
+        <div id='saved-initials'></div>
+        <div id='saved-scores'></div>
     </section>
 
 
