@@ -11,7 +11,7 @@
     <!-- Header -->
     <header>
     <div>
-        <!-- Highscores Button --> 
+        <!-- Highscores link --> 
         <a href="#highscores" id="highscores-btn">View Highscores</a>
         <!-- Countdown timer -->
         <div id="countdown-timer"> Timer:</div>
@@ -25,8 +25,23 @@
         Answer the following questions to the best of your ability before the timer runs out.</p>
 
     <!-- Start Button -->
-    <button class="button" type="button">Start Quiz</button>
-    </section>
+    <button class="button" type="start-quiz-btn">Start Quiz</button>
+    
+    <!-- Quiz Section -->
+    <div id="question-section" class="hide">
+        <ul id="question-title"> Question
+            <div id="answer-options" class="btn-grid">
+                <li class="button" id ="data-value-a">Answer A</li>
+                <li class="button" id ="data-value-b">Answer B</li>
+                <li class="button" id ="data-value-c">Answer C</li>
+                <li class="button" id ="data-value-d">Answer D</li>
+            </div> </ul>
+        <div id="display-answer" class="hide"><h3></h3></div>        
+    </div>
+
+    
+
+</section>
     <script src="assets/JavaScript/questions.js"></script>
     <script src="assets/JavaScript/script.js"></script>
 </body>

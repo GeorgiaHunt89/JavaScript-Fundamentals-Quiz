@@ -69,3 +69,8 @@ p {
     background-color: #CDB7F6
 
 }
+
+#start-quiz-btn {
+    margin: 20px;
+    padding: 20px;
+}
