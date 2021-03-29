@@ -1,15 +1,18 @@
 // Global Variables
 var secondsLeft = 45;
 var timeEl = document.querySelector('#countdown-timer');
-var removeHeading = document.getElementById('#heading-section');
-var startQuiz = document.getElementById('#quiz-section');
+var removeHeading = document.getElementById('#hide-heading');
+var startQuiz = document.getElementById('#hidden-quiz-section');
 var nextButton = document.getElementById('#next-btn');
 var finishQuiz = document.getElementById ('#finish-quiz');
-var endQuizSection = document.getElementById ('#end-quiz');
+var endQuizSection = document.getElementById('#end-quiz');
+var answerChoices = document.getElementById('#answer-options');
+var saveScore = document.getElementById('#total-score'); 
 var questIndex = 0;
+var initialsScore = document.getElementById('#stored-initials');
 
 
-const questionEl = document.getElementById('#quiz-questionTitle')
+const questionEl = document.getElementById('#quiz-questionTitle');
 const buttonEl = document.querySelector ('.button');
 const buttonStart = document.querySelector ('.start-quiz-btn');
 
@@ -39,17 +42,11 @@ function displayQuiz(){
     removeHeading.classList.add('hide');
     startQuiz.classList.remove('hide');
     nextButton.classList.remove('hide');
-    LaunchQuestions();
+    launchQuestions();
 }
 
-// Function to start quiz timer and show questions with Start button
-buttonStart.addEventListener('click', function(){
-    displayQuiz();
-    startTimer();
-})
-
 // Function to display end of quiz section
-function LaunchQuestions(){
+function launchQuestions(){
     if (questIndex === questions.length | secondsLeft === 0){
         endQuizSection.classList.remove('hide');
         startQuiz.classList.add('hide');
@@ -59,6 +56,7 @@ function LaunchQuestions(){
         
         console.log(leaderboard);
 
+// Else section linking to questions.js, displaying questions and all possible answers
     } else {
         questionEl.innerText = quiz[questIndex].questionTitle;
         data-value-a.innerHTML === quiz[questIndex].possibleAnswers[0];
@@ -69,7 +67,6 @@ function LaunchQuestions(){
 }
 
 // Function to display correct answer selection Yes or No alert
-
 function selectAnswer(){
     if (event.target.textContent === quiz[questIndex].answer){
         alert('Great job!\n That is correct.');
@@ -78,3 +75,39 @@ function selectAnswer(){
         secondsLeft = secondsLeft - 10;
     }
 }
+
+// Event Listener function to start quiz timer and show questions with Start button
+buttonStart.addEventListener('click', function(){
+    displayQuiz();
+    startTimer();
+});
+
+// Event Listener function to select users choice
+answerChoices.addEventListener('click', function(){
+    selectAnswer();
+    questIndex++;
+    launchQuestions();
+});
+
+// Event Listener for next button click
+nextButton.addEventListener('click',function(){
+    launchQuestions();
+});
+
+// Event Listener for saving score for that round
+saveScore.addEventListener('click', function(){
+alert('Well done, you have saved your score for this round.');
+
+var userScore = {
+    initials: [intitalsScore],
+    score: [leaderboard]
+}
+console.log(userScore);
+
+// Function to save scores in local storage
+function scoreStorage (){
+    localStorage.setItem('user score', JSON.stringify(userScore));
+    localStorage.setItem('initials', JSON.stringify(initialsScore));
+}
+scoreStorage(userScore);
+})
