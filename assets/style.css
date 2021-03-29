@@ -12,10 +12,8 @@ body {
 }
 
 
-.topnav {
-    background-color: lightgray;
-    overflow: hidden;
-    width: 100%
+.hide {
+    display: none;
 }
 
 #highscores-btn {
@@ -94,7 +92,5 @@ textarea {
 }
 
 
-.hide {
-    display: none;
-}
+
 

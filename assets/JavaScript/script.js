@@ -5,12 +5,13 @@ var removeHeading = document.getElementById('#heading-section');
 var startQuiz = document.getElementById('#quiz-section');
 var nextButton = document.getElementById('#next-btn');
 var finishQuiz = document.getElementById ('#finish-quiz');
+var endQuizSection = document.getElementById ('#end-quiz');
 var questIndex = 0;
 
 
 
 const buttonEl = document.querySelector ('.button');
-const buttonStart = document.querySelector ('.start-quiz-btn')
+const buttonStart = document.querySelector ('.start-quiz-btn');
 
 var leaderboard = [];
 
@@ -47,3 +48,15 @@ buttonStart.addEventListener('click', function(){
     startTimer();
 })
 
+// Function to display end of quiz section
+function LaunchQuestions(){
+    if (questIndex === questions.length | secondsLeft === 0){
+        endQuizSection.classList.remove('hide');
+        startQuiz.classList.add('hide');
+        var score = secondsLeft;
+        alert('Well done, you have scored ' + score);
+        leaderboard.push(score);
+        
+        console.log(leaderboard);
+    }
+}
