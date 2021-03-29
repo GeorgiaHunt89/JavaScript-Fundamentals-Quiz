@@ -9,7 +9,7 @@ var endQuizSection = document.getElementById ('#end-quiz');
 var questIndex = 0;
 
 
-
+const questionEl = document.getElementById('#quiz-questionTitle')
 const buttonEl = document.querySelector ('.button');
 const buttonStart = document.querySelector ('.start-quiz-btn');
 
@@ -58,5 +58,12 @@ function LaunchQuestions(){
         leaderboard.push(score);
         
         console.log(leaderboard);
+
+    } else {
+        questionEl.innerText = quiz[questIndex].questionTitle;
+        data-value-a.innerHTML = quiz[questIndex].possibleAnswers[0];
+        data-value-b.innerHTML = quiz[questIndex].possibleAnswers[1];
+        data-value-c.innerHTML = quiz[questIndex].possibleAnswers[2];
+        data-value-d.innerHTML = quiz[questIndex].possibleAnswers[3];
     }
 }
