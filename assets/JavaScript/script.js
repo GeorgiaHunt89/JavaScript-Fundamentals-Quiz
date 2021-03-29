@@ -1,18 +1,18 @@
 // Global Variables
 var secondsLeft = 45;
 var timeEl = document.querySelector('#countdown-timer');
-var removeHeading = document.getElementById('#hide-heading');
-var startQuiz = document.getElementById('#hidden-quiz-section');
-var nextButton = document.getElementById('#next-btn');
-var finishQuiz = document.getElementById ('#finish-quiz');
-var endQuizSection = document.getElementById('#end-quiz');
-var answerChoices = document.getElementById('#answer-options');
-var saveScore = document.getElementById('#total-score'); 
+const $headingSection = document.querySelector('#heading-section');
+const $startQuiz = document.querySelector('#quiz-section');
+var nextButton = document.querySelector('#next-btn');
+var finishQuiz = document.querySelector ('#finish-quiz');
+var endQuizSection = document.querySelector('#end-quiz');
+var answerChoices = document.querySelector('#answeroptions');
+const $saveScoreBtn = document.querySelector('#save-score-btn'); 
 var questIndex = 0;
-var initialsScore = document.getElementById('#stored-initials');
+var initialsScore = document.querySelector('#stored-initials');
 
 
-const questionEl = document.getElementById('#quiz-questionTitle');
+const questionEl = document.querySelector('#quiz-questionTitle');
 const buttonEl = document.querySelector ('.button');
 const buttonStart = document.querySelector ('.start-quiz-btn');
 
@@ -39,8 +39,8 @@ function sendMessage(){
 
 // Function to remove heading and start displaying the quiz questions
 function displayQuiz(){
-    removeHeading.classList.add('hide');
-    startQuiz.classList.remove('hide');
+    $headingSection.classList.add('hide');
+    $startQuiz.classList.remove('hide');
     nextButton.classList.remove('hide');
     launchQuestions();
 }
@@ -49,7 +49,7 @@ function displayQuiz(){
 function launchQuestions(){
     if (questIndex === questions.length | secondsLeft === 0){
         endQuizSection.classList.remove('hide');
-        startQuiz.classList.add('hide');
+        $startQuiz.classList.add('hide');
         var score = secondsLeft;
         alert('Well done, you have scored ' + score);
         leaderboard.push(score);
@@ -95,7 +95,7 @@ nextButton.addEventListener('click',function(){
 });
 
 // Event Listener for saving score for that round
-saveScore.addEventListener('click', function(){
+$saveScoreBtn.addEventListener('click', function(){
 alert('Well done, you have saved your score for this round.');
 
 var userScore = {
@@ -111,3 +111,4 @@ function scoreStorage (){
 }
 scoreStorage(userScore);
 })
+

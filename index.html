@@ -30,16 +30,16 @@
 
     <section id='quiz-section' class='hide'>
     <!-- Quiz Section -->
-            <ul id='question-title'>Question</ul>
-                <div id='answer-options'></div> 
-                    <li class='button' id='data-value-a'>Answer A</li>
+            <ul id='answeroptions'>Question
+                <li class='button' id='data-value-a'>Answer A</li>
                     <li class='button' id='data-value-b'>Answer B</li>
                     <li class='button' id='data-value-c'>Answer C</li>
                     <li class='button' id='data-value-d'>Answer D</li>
-            <h2 id='display-answer' class='hide'></h2>        
-    
+            <h2 id='display-answer' class='hide'></h2> 
+            </ul>
+                           
     <!-- Next Button -->    
-    <button class='button'> Next Question </button>
+    <button class='button' id="next-btn"> Next Question </button>
     </section>
     
     <!-- End Quiz Section-->
@@ -50,7 +50,7 @@
     <!-- Record Initials for Answers-->
         <textarea rows='1' cols='12' placeholder='YOUR INITIALS' id='enter-initials'></textarea>
     <!-- Submit Button -->    
-    <button class='button'> Submit </button>
+    <button class='button' id="save-score-btn"> Submit </button>
     </section>
 
     <!-- Highscores Section -->
