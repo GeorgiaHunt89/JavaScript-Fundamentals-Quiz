@@ -7,6 +7,8 @@ var nextButton = document.getElementById('#next-btn');
 var finishQuiz = document.getElementById ('#finish-quiz');
 var questIndex = 0;
 
+
+
 const buttonEl = document.querySelector ('.button');
 const buttonStart = document.querySelector ('.start-quiz-btn')
 
@@ -19,11 +21,16 @@ function startTimer(){
         secondsLeft = secondsLeft - .1;
         timeEl.textContent = secondsLeft.toFixed(2) + ' seconds left';
 
-        if(secondsLeft === 0){
+        if(secondsLeft === 0 | questIndex === questions.length){
             clearInterval(timerInterval);
             sendMessage();
+            return;
             }
     }, 100);
+}
+
+function sendMessage(){
+    timerEl.textContent = 'Bad luck, you are out of time.\nBetter luck nextime!'
 }
 
 // Function to remove heading and start displaying the quiz questions
@@ -35,8 +42,8 @@ function displayQuiz(){
 }
 
 // Function to start quiz timer and show questions with Start button
-[buttonEl, buttonStart].map(element => element.addEventListener('click' function(){
- startTimer();
- displayQuiz();   
-} ))
+buttonStart.addEventListener('click', function(){
+    displayQuiz();
+    startTimer();
+})
 
