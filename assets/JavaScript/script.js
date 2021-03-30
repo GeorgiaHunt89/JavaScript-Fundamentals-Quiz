@@ -8,11 +8,19 @@ const $nextButton = document.querySelector ('#next-btn');
     // Const for DisplayQuiz function
 const $headingSection = document.querySelector ('#heading-section');
 const $paragraphSection = document.querySelector ('#paragraph-section');
-const $startButtonSection = document.querySelector ('#start-btn-section')
-const $quizSection = document.querySelector ('#quiz-section')
+const $startButtonSection = document.querySelector ('#start-btn-section');
+const $quizSection = document.querySelector ('#quiz-section');
     // Const for LaunchQuestions function
-const $endQuizSection = document.querySelector ('#end-quiz-section')
-const $quizQuestion = document.querySelector ('quiz-question')
+let questIndex = 0;
+const $endQuizSection = document.querySelector ('#end-quiz-section');
+const $quizQuestion = document.querySelector ('#quiz-question');
+const $dataValueA = document.querySelector ('#data-value-a');
+const $dataValueB = document.querySelector ('#data-value-b');
+const $dataValueC = document.querySelector ('#data-value-c');
+const $dataValueD = document.querySelector ('#data-value-d');
+    // Const to listen to user selection
+const $userChoices = document.querySelector ('#user-choices');
+
 
 // Function for quiz timer to start counting down from 45 seconds
 function startTimer(){
@@ -31,8 +39,6 @@ function sendMessage(){
     $timerEl.textContent = 'Bad luck, you are out of time.\nBetter luck nextime!'
 }
 
-
-
 // Function to remove heading and start displaying the quiz questions
 function displayQuiz(){
     $headingSection.classList.add('hide');
@@ -42,36 +48,32 @@ function displayQuiz(){
     launchQuestions();
 }
 
-var questIndex = 0;
-
 // Function to display end of quiz section
 function launchQuestions(){
-    if (questIndex === questions.length | secondsLeft === 0){
+    if (questIndex === quiz.length | secondsLeft === 0){
         $endQuizSection.classList.remove('hide');
         $quizSection.classList.add('hide');
         var score = secondsLeft;
         alert('Well done, you have scored ' + score);
         leaderboard.push(score);
-        
-        console.log(leaderboard);
 
 // Else section linking to questions.js, displaying questions and all possible answers
     } else {
-        quizQuestion.innerText = quiz[questIndex].questionTitle;
-        data-value-a.innerHTML === quiz[questIndex].possibleAnswers[0];
-        data-value-b.innerHTML === quiz[questIndex].possibleAnswers[1];
-        data-value-c.innerHTML === quiz[questIndex].possibleAnswers[2];
-        data-value-d.innerHTML === quiz[questIndex].possibleAnswers[3];
+        $quizQuestion.innerText = quiz[questIndex].question;
+        $dataValueA.innerHTML === quiz[questIndex].possibleAnswers[0];
+        $dataValueB.innerHTML === quiz[questIndex].possibleAnswers[1];
+        $dataValueC.innerHTML === quiz[questIndex].possibleAnswers[2];
+        $dataValueD.innerHTML === quiz[questIndex].possibleAnswers[3];
     }
 }
 
 // Function to display correct answer selection Yes or No alert
 function selectAnswer(){
-    if (event.target.textContent === quiz[questIndex].answer){
+    if (event.target.textContent === quiz[questIndex].correctAnswer){
         alert('Great job!\n That is correct.');
     } else {
         alert('Whoops, wrong answer.');
-        secondsLeft = secondsLeft - 10;
+        secondsLeft = secondsLeft - 05;
     }
 }
 
@@ -83,7 +85,7 @@ $startButton.addEventListener('click', function(){
 });
 
 // Event Listener function to select users choice
-answerChoices.addEventListener('click', function(){
+$userChoices.addEventListener('click', function(){
     selectAnswer();
     questIndex++;
     launchQuestions();

@@ -1,8 +1,8 @@
 // Questions, answers & correct answers
-const quiz = [
+let quiz = [
     { // First question
         question: 'Commonly used data types DO NOT include:',
-        possibleAnswers:['Strings','Booleans','Alerts','Numbers' ],
+        possibleAnswers:['Strings','Booleans','Alerts','Numbers'],
         correctAnswer: 'Alerts'
     },
     { // Second question
