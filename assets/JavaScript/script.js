@@ -5,9 +5,11 @@ var leaderboard = [];
 
 const $startButton = document.querySelector ('#start-btn'); 
 const $nextButton = document.querySelector ('#next-btn');
+    // Const for DisplayQuiz function
 const $headingSection = document.querySelector ('#heading-section');
 const $paragraphSection = document.querySelector ('#paragraph-section');
 const $startButtonSection = document.querySelector ('#start-btn-section')
+const $quizSection = document.querySelector ('#quiz-section')
 
 
 // Function for quiz timer to start counting down from 45 seconds
