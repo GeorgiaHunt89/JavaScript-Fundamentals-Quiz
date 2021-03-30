@@ -39,7 +39,7 @@ function startTimer(){
     }, 100);
 }
 function sendMessage(){
-    $timerEl.textContent = 'Bad luck, you are out of time.\nBetter luck nextime!'
+    $timerEl.textContent = 'You have finished the quiz, well done!'
 }
 
 // Function to remove heading and start displaying the quiz questions
@@ -53,7 +53,7 @@ function displayQuiz(){
 
 // Function to display end of quiz section
 function launchQuestions(){
-    if (questIndex === quiz.length | secondsLeft === 0){
+    if (questIndex === quiz.length | secondsLeft === 0){  //<0
         $endQuizSection.classList.remove('hide');
         $quizSection.classList.add('hide');
         var score = secondsLeft;
@@ -63,10 +63,10 @@ function launchQuestions(){
 // Else section linking to questions.js, displaying questions and all possible answers
     } else {
         $quizQuestion.innerText = quiz[questIndex].question;
-        $dataValueA.innerHTML === quiz[questIndex].possibleAnswers[0];
-        $dataValueB.innerHTML === quiz[questIndex].possibleAnswers[1];
-        $dataValueC.innerHTML === quiz[questIndex].possibleAnswers[2];
-        $dataValueD.innerHTML === quiz[questIndex].possibleAnswers[3];
+        $dataValueA.innerHTML = quiz[questIndex].possibleAnswers[0];
+        $dataValueB.innerHTML = quiz[questIndex].possibleAnswers[1];
+        $dataValueC.innerText = quiz[questIndex].possibleAnswers[2];
+        $dataValueD.innerHTML = quiz[questIndex].possibleAnswers[3];
     }
 }
 
