@@ -10,7 +10,9 @@ const $headingSection = document.querySelector ('#heading-section');
 const $paragraphSection = document.querySelector ('#paragraph-section');
 const $startButtonSection = document.querySelector ('#start-btn-section')
 const $quizSection = document.querySelector ('#quiz-section')
-
+    // Const for LaunchQuestions function
+const $endQuizSection = document.querySelector ('#end-quiz-section')
+const $quizQuestion = document.querySelector ('quiz-question')
 
 // Function for quiz timer to start counting down from 45 seconds
 function startTimer(){
@@ -25,7 +27,6 @@ function startTimer(){
             }
     }, 100);
 }
-
 function sendMessage(){
     $timerEl.textContent = 'Bad luck, you are out of time.\nBetter luck nextime!'
 }
@@ -41,11 +42,13 @@ function displayQuiz(){
     launchQuestions();
 }
 
+var questIndex = 0;
+
 // Function to display end of quiz section
 function launchQuestions(){
     if (questIndex === questions.length | secondsLeft === 0){
-        endQuizSection.classList.remove('hide');
-        $startQuiz.classList.add('hide');
+        $endQuizSection.classList.remove('hide');
+        $quizSection.classList.add('hide');
         var score = secondsLeft;
         alert('Well done, you have scored ' + score);
         leaderboard.push(score);
@@ -54,7 +57,7 @@ function launchQuestions(){
 
 // Else section linking to questions.js, displaying questions and all possible answers
     } else {
-        questionEl.innerText = quiz[questIndex].questionTitle;
+        quizQuestion.innerText = quiz[questIndex].questionTitle;
         data-value-a.innerHTML === quiz[questIndex].possibleAnswers[0];
         data-value-b.innerHTML === quiz[questIndex].possibleAnswers[1];
         data-value-c.innerHTML === quiz[questIndex].possibleAnswers[2];
