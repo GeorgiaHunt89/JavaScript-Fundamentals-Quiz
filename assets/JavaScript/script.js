@@ -1,20 +1,6 @@
 // Global Variables
 var secondsLeft = 45;
 var timeEl = document.querySelector('#countdown-timer');
-const $headingSection = document.querySelector('#heading-section');
-const $startQuiz = document.querySelector('#quiz-section');
-var nextButton = document.querySelector('#next-btn');
-var finishQuiz = document.querySelector ('#finish-quiz');
-var endQuizSection = document.querySelector('#end-quiz');
-var answerChoices = document.querySelector('#answeroptions');
-const $saveScoreBtn = document.querySelector('#save-score-btn'); 
-var questIndex = 0;
-var initialsScore = document.querySelector('#stored-initials');
-
-
-const questionEl = document.querySelector('#quiz-questionTitle');
-const buttonEl = document.querySelector ('.button');
-const buttonStart = document.querySelector ('.start-quiz-btn');
 
 var leaderboard = [];
 
@@ -37,11 +23,19 @@ function sendMessage(){
     timerEl.textContent = 'Bad luck, you are out of time.\nBetter luck nextime!'
 }
 
+// Event Listener function to start quiz timer and show questions with Start button
+buttonStart.addEventListener('click', function(){
+    displayQuiz();
+    startTimer();
+    launchQuestions();
+});
+
 // Function to remove heading and start displaying the quiz questions
 function displayQuiz(){
     $headingSection.classList.add('hide');
-    $startQuiz.classList.remove('hide');
-    nextButton.classList.remove('hide');
+    $paragraphSection.classList.add('hide');
+    $startButtonSection.classList.add('hide');
+    $quizSection.classList.remove('hide');
     launchQuestions();
 }
 
@@ -80,17 +74,13 @@ function selectAnswer(){
 buttonStart.addEventListener('click', function(){
     displayQuiz();
     startTimer();
+    launchQuestions();
 });
 
 // Event Listener function to select users choice
 answerChoices.addEventListener('click', function(){
     selectAnswer();
     questIndex++;
-    launchQuestions();
-});
-
-// Event Listener for next button click
-nextButton.addEventListener('click',function(){
     launchQuestions();
 });
 
