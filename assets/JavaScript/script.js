@@ -26,7 +26,7 @@ const $userChoices = document.querySelector ('#user-choices');
 function startTimer(){
     var timerInterval = setInterval(function(){
         secondsLeft = secondsLeft - .1;
-        timeEl.textContent = secondsLeft.toFixed(2) + ' seconds left';
+        $timerEl.textContent = secondsLeft.toFixed(2) + ' seconds left';
 
         if(secondsLeft === 0 | questIndex === questions.length){
             clearInterval(timerInterval);
