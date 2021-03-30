@@ -1,8 +1,13 @@
 // Global Variables
-var secondsLeft = 45;
-var timeEl = document.querySelector('#countdown-timer');
-
+var secondsLeft = 60;
+const $timerEl = document.querySelector('#countdown-timer');
 var leaderboard = [];
+
+const $startButton = document.querySelector ('#start-btn'); 
+const $nextButton = document.querySelector ('#next-btn');
+const $headingSection = document.querySelector ('#heading-section');
+const $paragraphSection = document.querySelector ('#paragraph-section');
+const $startButtonSection = document.querySelector ('#start-btn-section')
 
 
 // Function for quiz timer to start counting down from 45 seconds
@@ -20,15 +25,10 @@ function startTimer(){
 }
 
 function sendMessage(){
-    timerEl.textContent = 'Bad luck, you are out of time.\nBetter luck nextime!'
+    $timerEl.textContent = 'Bad luck, you are out of time.\nBetter luck nextime!'
 }
 
-// Event Listener function to start quiz timer and show questions with Start button
-buttonStart.addEventListener('click', function(){
-    displayQuiz();
-    startTimer();
-    launchQuestions();
-});
+
 
 // Function to remove heading and start displaying the quiz questions
 function displayQuiz(){
@@ -71,7 +71,7 @@ function selectAnswer(){
 }
 
 // Event Listener function to start quiz timer and show questions with Start button
-buttonStart.addEventListener('click', function(){
+$startButton.addEventListener('click', function(){
     displayQuiz();
     startTimer();
     launchQuestions();
