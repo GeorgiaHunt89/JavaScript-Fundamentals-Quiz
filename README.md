@@ -28,15 +28,15 @@ During the creation of this repo I struggled with mislabeling id's in the JavaSc
 
 ![JavaScript-Fundamentals-Quiz-Q1](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/master/assets/Images/JavaScript-Fundamentals-Quiz-Q1.png)
 
-![JavaScript-Fundamentals-Quiz-Q1-Correct](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/master/assets/Images/JavaScript-Fundamentals-Quiz-Q1-Correct.png)
+![JavaScript-Fundamentals-Quiz-Q1-Correct](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/master/assets/Images/JavaScript-Fundamentals-Quiz-Q1-%20Correct.png)
 
 ![JavaScript-Fundamentals-Quiz-Q2](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/master/assets/Images/JavaScript-Fundamentals-Quiz-Q2.png)
 
 ![JavaScript-Fundamentals-Quiz-Q2-Wrong](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/master/assets/Images/JavaScript-Fundamentals-Quiz-Q2-Wrong.png)
 
-![JavaScript-Fundamentals-Quiz-Q3](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Q2.png)
+![JavaScript-Fundamentals-Quiz-Q3](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/master/assets/Images/JavaScript-Fundamentals-Quiz-Q3.png)
 
-![JavaScript-Fundamentals-Quiz-Q4](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Q2.png)
+![JavaScript-Fundamentals-Quiz-Q4](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/master/assets/Images/JavaScript-Fundamentals-Quiz-Q4.png)
 
 ![JavaScript-Fundamentals-Quiz-Score](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/master/assets/Images/JavaScript-Fundamentals-Quiz-Score.png)
 
