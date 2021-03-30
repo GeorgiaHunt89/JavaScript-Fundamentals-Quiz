@@ -16,4 +16,24 @@ https://georgiahunt89.github.io/JavaScript-Fundamentals-Quiz/
     c. JavaScript folder containing:
         - question.js code
         - script.js code
+    d. Images folder containing:
+        - Images of each quiz question, correct and wrong alert messages, score screen and save score screen.
 
+## Screenshots of quiz sections
+![JavaScript-Fundamentals-Quiz-Start](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Start.png)
+
+![JavaScript-Fundamentals-Quiz-Q1](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Q1.png)
+
+![JavaScript-Fundamentals-Quiz-Q1-Correct](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Q1-Correct.png)
+
+![JavaScript-Fundamentals-Quiz-Q2](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Q2.png)
+
+![JavaScript-Fundamentals-Quiz-Q2-Wrong](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Q2-Wrong.png)
+
+![JavaScript-Fundamentals-Quiz-Q3](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Q2.png)
+
+![JavaScript-Fundamentals-Quiz-Q4](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Q2.png)
+
+![JavaScript-Fundamentals-Quiz-Score](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Score.png)
+
+![JavaScript-Fundamentals-Quiz-Save](https://github.com/GeorgiaHunt89/JavaScript-Fundamentals-Quiz/blob/main/assets/Images/JavaScript-Fundamentals-Quiz-Save.png)
