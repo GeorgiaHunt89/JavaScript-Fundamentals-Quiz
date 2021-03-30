@@ -1,8 +1,9 @@
 // Global Variables
 var secondsLeft = 60;
-const $timerEl = document.querySelector('#countdown-timer');
 var leaderboard = [];
-
+var savedNames = [];
+    // Const to start timer when button pressed
+const $timerEl = document.querySelector('#countdown-timer');
 const $startButton = document.querySelector ('#start-btn'); 
 const $nextButton = document.querySelector ('#next-btn');
     // Const for DisplayQuiz function
@@ -20,6 +21,9 @@ const $dataValueC = document.querySelector ('#data-value-c');
 const $dataValueD = document.querySelector ('#data-value-d');
     // Const to listen to user selection
 const $userChoices = document.querySelector ('#user-choices');
+    // Const to save score
+const $saveScoreBtn = document.querySelector ('#save-score-btn');
+const $recordInitials = document.querySelector ('#record-initials');
 
 
 // Function for quiz timer to start counting down from 45 seconds
@@ -28,10 +32,9 @@ function startTimer(){
         secondsLeft = secondsLeft - .1;
         $timerEl.textContent = secondsLeft.toFixed(2) + ' seconds left';
 
-        if(secondsLeft === 0 | questIndex === questions.length){
+        if(secondsLeft === 0 | questIndex === quiz.length){
             clearInterval(timerInterval);
             sendMessage();
-            return;
             }
     }, 100);
 }
@@ -54,7 +57,7 @@ function launchQuestions(){
         $endQuizSection.classList.remove('hide');
         $quizSection.classList.add('hide');
         var score = secondsLeft;
-        alert('Well done, you have scored ' + score);
+        alert('You scored ' + score);
         leaderboard.push(score);
 
 // Else section linking to questions.js, displaying questions and all possible answers
@@ -96,12 +99,13 @@ $saveScoreBtn.addEventListener('click', function(){
 alert('Well done, you have saved your score for this round.');
 
 var userScore = {
-    initials: [intitalsScore],
+    initials: [recordIntitals],
     score: [leaderboard]
 }
 console.log(userScore);
 
 // Function to save scores in local storage
+savedNames.push(recordIntitals)
 function scoreStorage (){
     localStorage.setItem('user score', JSON.stringify(userScore));
     localStorage.setItem('initials', JSON.stringify(initialsScore));
