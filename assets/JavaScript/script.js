@@ -65,7 +65,7 @@ function launchQuestions(){
         $quizQuestion.innerText = quiz[questIndex].question;
         $dataValueA.innerHTML = quiz[questIndex].possibleAnswers[0];
         $dataValueB.innerHTML = quiz[questIndex].possibleAnswers[1];
-        $dataValueC.innerText = quiz[questIndex].possibleAnswers[2];
+        $dataValueC.innerHTML = quiz[questIndex].possibleAnswers[2];
         $dataValueD.innerHTML = quiz[questIndex].possibleAnswers[3];
     }
 }

@@ -56,6 +56,24 @@ p {
     font-size: 15px;
 }
 
+#quiz-section {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px; 
+    margin: 10px;
+}
+
+#user-choices {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 15px;
+    font: 15px;
+    text-align: center;
+    justify-self: center;
+}
+
 .button {
     margin: 0 auto;
     display:block;
